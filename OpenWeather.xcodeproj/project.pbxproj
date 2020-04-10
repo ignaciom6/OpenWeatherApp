@@ -15,9 +15,12 @@
 		4F5630EC244099580023BEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5630EA244099580023BEEC /* LaunchScreen.storyboard */; };
 		4F5630F7244099590023BEEC /* OpenWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5630F6244099590023BEEC /* OpenWeatherTests.swift */; };
 		4F56310624409A6D0023BEEC /* OWCityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56310524409A6D0023BEEC /* OWCityModel.swift */; };
-		4F56310824409AA30023BEEC /* OWWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56310724409AA30023BEEC /* OWWeatherModel.swift */; };
+		4F56310824409AA30023BEEC /* OWCurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56310724409AA30023BEEC /* OWCurrentWeatherModel.swift */; };
 		4F56310A2440A2A40023BEEC /* OWWeatherDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631092440A2A40023BEEC /* OWWeatherDescriptionModel.swift */; };
 		4F56310D2440A83C0023BEEC /* OWConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56310C2440A83C0023BEEC /* OWConstants.swift */; };
+		4F56310F2440AC900023BEEC /* OWWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56310E2440AC900023BEEC /* OWWeatherModel.swift */; };
+		4F5631112440ACB40023BEEC /* OWDailyWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631102440ACB40023BEEC /* OWDailyWeatherModel.swift */; };
+		4F5631132440AE860023BEEC /* OWTempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631122440AE860023BEEC /* OWTempModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +46,12 @@
 		4F5630F6244099590023BEEC /* OpenWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherTests.swift; sourceTree = "<group>"; };
 		4F5630F8244099590023BEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F56310524409A6D0023BEEC /* OWCityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCityModel.swift; sourceTree = "<group>"; };
-		4F56310724409AA30023BEEC /* OWWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWWeatherModel.swift; sourceTree = "<group>"; };
+		4F56310724409AA30023BEEC /* OWCurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCurrentWeatherModel.swift; sourceTree = "<group>"; };
 		4F5631092440A2A40023BEEC /* OWWeatherDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWWeatherDescriptionModel.swift; sourceTree = "<group>"; };
 		4F56310C2440A83C0023BEEC /* OWConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWConstants.swift; sourceTree = "<group>"; };
+		4F56310E2440AC900023BEEC /* OWWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWWeatherModel.swift; sourceTree = "<group>"; };
+		4F5631102440ACB40023BEEC /* OWDailyWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWDailyWeatherModel.swift; sourceTree = "<group>"; };
+		4F5631122440AE860023BEEC /* OWTempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWTempModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				4F56310524409A6D0023BEEC /* OWCityModel.swift */,
-				4F56310724409AA30023BEEC /* OWWeatherModel.swift */,
+				4F56310E2440AC900023BEEC /* OWWeatherModel.swift */,
+				4F56310724409AA30023BEEC /* OWCurrentWeatherModel.swift */,
+				4F5631102440ACB40023BEEC /* OWDailyWeatherModel.swift */,
 				4F5631092440A2A40023BEEC /* OWWeatherDescriptionModel.swift */,
+				4F5631122440AE860023BEEC /* OWTempModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,12 +262,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F56310624409A6D0023BEEC /* OWCityModel.swift in Sources */,
+				4F5631112440ACB40023BEEC /* OWDailyWeatherModel.swift in Sources */,
 				4F56310A2440A2A40023BEEC /* OWWeatherDescriptionModel.swift in Sources */,
+				4F5631132440AE860023BEEC /* OWTempModel.swift in Sources */,
 				4F56310D2440A83C0023BEEC /* OWConstants.swift in Sources */,
 				4F5630E42440994F0023BEEC /* OWCityListViewController.swift in Sources */,
 				4F5630E02440994F0023BEEC /* AppDelegate.swift in Sources */,
 				4F5630E22440994F0023BEEC /* SceneDelegate.swift in Sources */,
-				4F56310824409AA30023BEEC /* OWWeatherModel.swift in Sources */,
+				4F56310F2440AC900023BEEC /* OWWeatherModel.swift in Sources */,
+				4F56310824409AA30023BEEC /* OWCurrentWeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

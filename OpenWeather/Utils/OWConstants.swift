@@ -9,6 +9,8 @@
 import Foundation
 
 struct OWConstants {
+    static let kCurrentKey = "current"
+    static let kDailyKey = "daily"
     static let kTempKey = "temp"
     static let kFeelsLikeKey = "feels_like"
     static let kTimeKey = "dt"
@@ -18,4 +20,10 @@ struct OWConstants {
     static let kMainKey = "main"
     static let kDescriptionKey = "description"
     static let kIconKey = "icon"
+    static let kDayKey = "day"
+    static let kMinKey = "min"
+    static let kMaxKey = "max"
+    static let kNightKey = "night"
+    static let kEveKey = "eve"
+    static let kMornKey = "morn"
 }

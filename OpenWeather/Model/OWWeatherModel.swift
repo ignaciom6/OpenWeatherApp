@@ -10,28 +10,19 @@ import UIKit
 
 class OWWeatherModel: NSObject {
     
-    var temp: Double
-    var feelsLike: Double
-    var time: Double
-    var wind: Double
-    var humidity: Double
-    var weatherDescription: [OWWeatherDescriptionModel]
-
+    var currentWeather: OWCurrentWeatherModel
+    var dailyWeather: [OWDailyWeatherModel]
+    
     init(withDictionary dictionary: [String : Any]) {
-        temp = dictionary[OWConstants.kTempKey] as! Double
-        feelsLike = dictionary[OWConstants.kFeelsLikeKey] as! Double
-        time = dictionary[OWConstants.kTimeKey] as! Double
-        wind = dictionary[OWConstants.kWindSpeedKey] as! Double
-        humidity = dictionary[OWConstants.kHumidityKey] as! Double
+        currentWeather = dictionary[OWConstants.kCurrentKey] as! OWCurrentWeatherModel
         
-        let array = dictionary[OWConstants.kWeatherKey] as! [AnyHashable]
-        var weatherArray: [OWWeatherDescriptionModel] = []
-        for weather in array {
-            let weatherDesc = OWWeatherDescriptionModel(withDictionary: weather as! [String : Any])
-            weatherArray.append(weatherDesc)
+        let array = dictionary[OWConstants.kDailyKey] as! [AnyHashable]
+        var dailyArray: [OWDailyWeatherModel] = []
+        for daily in array {
+            let dailyWeather = OWDailyWeatherModel(withDictionary: daily as! [String : Any])
+            dailyArray.append(dailyWeather)
         }
         
-        weatherDescription = weatherArray
+        dailyWeather = dailyArray
     }
-
 }
