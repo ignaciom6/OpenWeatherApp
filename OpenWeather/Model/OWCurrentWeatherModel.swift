@@ -15,6 +15,7 @@ class OWCurrentWeatherModel: NSObject {
     var time: Double
     var wind: Double
     var humidity: Double
+    var rain: Double
     var weatherDescription: [OWWeatherDescriptionModel]
 
     init(withDictionary dictionary: [String : Any]) {
@@ -23,6 +24,7 @@ class OWCurrentWeatherModel: NSObject {
         time = dictionary[OWConstants.kTimeKey] as! Double
         wind = dictionary[OWConstants.kWindSpeedKey] as! Double
         humidity = dictionary[OWConstants.kHumidityKey] as! Double
+        rain = dictionary[OWConstants.kRainKey] as! Double ?? 0
         
         let array = dictionary[OWConstants.kWeatherKey] as! [AnyHashable]
         var weatherArray: [OWWeatherDescriptionModel] = []

@@ -26,4 +26,5 @@ struct OWConstants {
     static let kNightKey = "night"
     static let kEveKey = "eve"
     static let kMornKey = "morn"
+    static let kRainKey = "rain"
 }
