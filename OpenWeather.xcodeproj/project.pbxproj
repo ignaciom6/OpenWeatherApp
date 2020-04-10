@@ -21,6 +21,7 @@
 		4F56310F2440AC900023BEEC /* OWWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56310E2440AC900023BEEC /* OWWeatherModel.swift */; };
 		4F5631112440ACB40023BEEC /* OWDailyWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631102440ACB40023BEEC /* OWDailyWeatherModel.swift */; };
 		4F5631132440AE860023BEEC /* OWTempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631122440AE860023BEEC /* OWTempModel.swift */; };
+		4F5631152440EE900023BEEC /* OWCityWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631142440EE900023BEEC /* OWCityWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4F56310E2440AC900023BEEC /* OWWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWWeatherModel.swift; sourceTree = "<group>"; };
 		4F5631102440ACB40023BEEC /* OWDailyWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWDailyWeatherModel.swift; sourceTree = "<group>"; };
 		4F5631122440AE860023BEEC /* OWTempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWTempModel.swift; sourceTree = "<group>"; };
+		4F5631142440EE900023BEEC /* OWCityWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCityWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4F5630E32440994F0023BEEC /* OWCityListViewController.swift */,
+				4F5631142440EE900023BEEC /* OWCityWeatherViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				4F5631132440AE860023BEEC /* OWTempModel.swift in Sources */,
 				4F56310D2440A83C0023BEEC /* OWConstants.swift in Sources */,
 				4F5630E42440994F0023BEEC /* OWCityListViewController.swift in Sources */,
+				4F5631152440EE900023BEEC /* OWCityWeatherViewController.swift in Sources */,
 				4F5630E02440994F0023BEEC /* AppDelegate.swift in Sources */,
 				4F5630E22440994F0023BEEC /* SceneDelegate.swift in Sources */,
 				4F56310F2440AC900023BEEC /* OWWeatherModel.swift in Sources */,
