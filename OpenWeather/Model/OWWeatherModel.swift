@@ -8,13 +8,13 @@
 
 import UIKit
 
-class OWWeatherModel: NSObject {
+class OWWeatherModel: OWBaseModel {
     
     var currentWeather: OWCurrentWeatherModel
     var dailyWeather: [OWDailyWeatherModel]
     
-    init(withDictionary dictionary: [String : Any]) {
-        currentWeather = dictionary[OWConstants.kCurrentKey] as! OWCurrentWeatherModel
+    required init(withDictionary dictionary: [String : Any]) {
+        currentWeather = OWCurrentWeatherModel(withDictionary: dictionary[OWConstants.kCurrentKey] as! [String : Any])
         
         let array = dictionary[OWConstants.kDailyKey] as! [AnyHashable]
         var dailyArray: [OWDailyWeatherModel] = []

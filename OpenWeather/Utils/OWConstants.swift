@@ -27,4 +27,7 @@ struct OWConstants {
     static let kEveKey = "eve"
     static let kMornKey = "morn"
     static let kRainKey = "rain"
+    static let k1hKey = "1h"
+    static let kListToWeatherSegue = "ListToWeatherSegue"
+    static let kDefaultDoubleValue = 0.0
 }

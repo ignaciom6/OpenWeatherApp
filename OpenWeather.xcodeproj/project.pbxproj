@@ -23,6 +23,16 @@
 		4F5631132440AE860023BEEC /* OWTempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631122440AE860023BEEC /* OWTempModel.swift */; };
 		4F5631152440EE900023BEEC /* OWCityWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631142440EE900023BEEC /* OWCityWeatherViewController.swift */; };
 		4F563118244168740023BEEC /* OWExtendedForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F563117244168740023BEEC /* OWExtendedForecastTableViewCell.swift */; };
+		4F56311A2441F6920023BEEC /* OWConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631192441F6910023BEEC /* OWConnectionManager.swift */; };
+		4F56311D2441F7A50023BEEC /* OWModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56311C2441F7A50023BEEC /* OWModelManager.swift */; };
+		4F56311F2441F7B50023BEEC /* OWBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56311E2441F7B50023BEEC /* OWBaseModel.swift */; };
+		4F5631222441F8660023BEEC /* OWCityWeatherModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631212441F8660023BEEC /* OWCityWeatherModelManager.swift */; };
+		4F5631242441FB5E0023BEEC /* OWConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631232441FB5E0023BEEC /* OWConnectionService.swift */; };
+		4F5631262442037A0023BEEC /* OWServiceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5631252442037A0023BEEC /* OWServiceUtils.swift */; };
+		4F56312C244241720023BEEC /* OWSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56312B244241720023BEEC /* OWSpinner.swift */; };
+		4F56312E24427EEC0023BEEC /* OWRainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56312D24427EEC0023BEEC /* OWRainModel.swift */; };
+		4F5631302442828D0023BEEC /* OWImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56312F2442828C0023BEEC /* OWImageDownloader.swift */; };
+		4F563133244289E50023BEEC /* OWCityWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F563132244289E50023BEEC /* OWCityWeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +66,16 @@
 		4F5631122440AE860023BEEC /* OWTempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWTempModel.swift; sourceTree = "<group>"; };
 		4F5631142440EE900023BEEC /* OWCityWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCityWeatherViewController.swift; sourceTree = "<group>"; };
 		4F563117244168740023BEEC /* OWExtendedForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWExtendedForecastTableViewCell.swift; sourceTree = "<group>"; };
+		4F5631192441F6910023BEEC /* OWConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWConnectionManager.swift; sourceTree = "<group>"; };
+		4F56311C2441F7A50023BEEC /* OWModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWModelManager.swift; sourceTree = "<group>"; };
+		4F56311E2441F7B50023BEEC /* OWBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWBaseModel.swift; sourceTree = "<group>"; };
+		4F5631212441F8660023BEEC /* OWCityWeatherModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCityWeatherModelManager.swift; sourceTree = "<group>"; };
+		4F5631232441FB5E0023BEEC /* OWConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWConnectionService.swift; sourceTree = "<group>"; };
+		4F5631252442037A0023BEEC /* OWServiceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWServiceUtils.swift; sourceTree = "<group>"; };
+		4F56312B244241720023BEEC /* OWSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWSpinner.swift; sourceTree = "<group>"; };
+		4F56312D24427EEC0023BEEC /* OWRainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWRainModel.swift; sourceTree = "<group>"; };
+		4F56312F2442828C0023BEEC /* OWImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWImageDownloader.swift; sourceTree = "<group>"; };
+		4F563132244289E50023BEEC /* OWCityWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCityWeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +117,13 @@
 		4F5630DE2440994F0023BEEC /* OpenWeather */ = {
 			isa = PBXGroup;
 			children = (
+				4F563131244289BE0023BEEC /* ViewModel */,
 				4F5631012440997A0023BEEC /* Model */,
 				4F5631022440999B0023BEEC /* ViewControllers */,
 				4F563103244099C60023BEEC /* Managers */,
 				4F563104244099CF0023BEEC /* Services */,
 				4F56310B2440A8100023BEEC /* Utils */,
+				4F56311B2441F7810023BEEC /* Protocols */,
 				4F5630DF2440994F0023BEEC /* AppDelegate.swift */,
 				4F5630E12440994F0023BEEC /* SceneDelegate.swift */,
 				4F5630E52440994F0023BEEC /* Main.storyboard */,
@@ -130,6 +152,7 @@
 				4F5631102440ACB40023BEEC /* OWDailyWeatherModel.swift */,
 				4F5631092440A2A40023BEEC /* OWWeatherDescriptionModel.swift */,
 				4F5631122440AE860023BEEC /* OWTempModel.swift */,
+				4F56312D24427EEC0023BEEC /* OWRainModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +170,8 @@
 		4F563103244099C60023BEEC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4F5631202441F8300023BEEC /* Model Managers */,
+				4F5631192441F6910023BEEC /* OWConnectionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -154,6 +179,7 @@
 		4F563104244099CF0023BEEC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4F5631232441FB5E0023BEEC /* OWConnectionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				4F56310C2440A83C0023BEEC /* OWConstants.swift */,
+				4F5631252442037A0023BEEC /* OWServiceUtils.swift */,
+				4F56312B244241720023BEEC /* OWSpinner.swift */,
+				4F56312F2442828C0023BEEC /* OWImageDownloader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -172,6 +201,31 @@
 				4F563117244168740023BEEC /* OWExtendedForecastTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		4F56311B2441F7810023BEEC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4F56311C2441F7A50023BEEC /* OWModelManager.swift */,
+				4F56311E2441F7B50023BEEC /* OWBaseModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4F5631202441F8300023BEEC /* Model Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4F5631212441F8660023BEEC /* OWCityWeatherModelManager.swift */,
+			);
+			path = "Model Managers";
+			sourceTree = "<group>";
+		};
+		4F563131244289BE0023BEEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F563132244289E50023BEEC /* OWCityWeatherViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,14 +332,24 @@
 				4F56310624409A6D0023BEEC /* OWCityModel.swift in Sources */,
 				4F5631112440ACB40023BEEC /* OWDailyWeatherModel.swift in Sources */,
 				4F56310A2440A2A40023BEEC /* OWWeatherDescriptionModel.swift in Sources */,
+				4F56311D2441F7A50023BEEC /* OWModelManager.swift in Sources */,
 				4F5631132440AE860023BEEC /* OWTempModel.swift in Sources */,
+				4F56312E24427EEC0023BEEC /* OWRainModel.swift in Sources */,
+				4F5631242441FB5E0023BEEC /* OWConnectionService.swift in Sources */,
+				4F5631222441F8660023BEEC /* OWCityWeatherModelManager.swift in Sources */,
+				4F563133244289E50023BEEC /* OWCityWeatherViewModel.swift in Sources */,
 				4F56310D2440A83C0023BEEC /* OWConstants.swift in Sources */,
 				4F5630E42440994F0023BEEC /* OWCityListViewController.swift in Sources */,
+				4F5631262442037A0023BEEC /* OWServiceUtils.swift in Sources */,
+				4F56311F2441F7B50023BEEC /* OWBaseModel.swift in Sources */,
+				4F56312C244241720023BEEC /* OWSpinner.swift in Sources */,
+				4F5631302442828D0023BEEC /* OWImageDownloader.swift in Sources */,
 				4F5631152440EE900023BEEC /* OWCityWeatherViewController.swift in Sources */,
 				4F5630E02440994F0023BEEC /* AppDelegate.swift in Sources */,
 				4F5630E22440994F0023BEEC /* SceneDelegate.swift in Sources */,
 				4F563118244168740023BEEC /* OWExtendedForecastTableViewCell.swift in Sources */,
 				4F56310F2440AC900023BEEC /* OWWeatherModel.swift in Sources */,
+				4F56311A2441F6920023BEEC /* OWConnectionManager.swift in Sources */,
 				4F56310824409AA30023BEEC /* OWCurrentWeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

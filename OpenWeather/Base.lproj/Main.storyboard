@@ -186,7 +186,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GrL-1h-RRi">
                                 <rect key="frame" x="73.666666666666686" y="125" width="267" height="142"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-rx-NHJ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-rx-NHJ">
                                         <rect key="frame" x="8" y="39" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="OVF-ZY-bJQ"/>
@@ -290,8 +290,11 @@
                     <navigationItem key="navigationItem" id="ZIH-z2-SHB"/>
                     <connections>
                         <outlet property="backgroundImage" destination="GWF-bP-jHt" id="ZQL-ji-003"/>
+                        <outlet property="dateLabel" destination="K2h-3Z-EI9" id="dHT-V0-kXV"/>
+                        <outlet property="descriptionLabel" destination="GFI-sT-06b" id="9LH-tT-4w1"/>
+                        <outlet property="mainWeatherIcon" destination="CSS-rx-NHJ" id="oa4-cu-zDI"/>
                         <outlet property="tableView" destination="iUg-Vn-Ih3" id="CdF-jq-K9U"/>
-                        <outlet property="windImg" destination="JWP-ed-Awe" id="A2O-KL-Jnr"/>
+                        <outlet property="tempLabel" destination="a6Q-h5-5vW" id="JhU-RT-4fz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4U-Zm-e0J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
