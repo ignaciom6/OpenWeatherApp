@@ -15,13 +15,11 @@ class OWCityWeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        windImg.tintColor = UIColor.white
-        
+                
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        backgroundImage.image = UIImage(named: "Vienna")
+        backgroundImage.image = UIImage(named: "Berlin")
         
         let blurEffect = UIBlurEffect(style: .systemUltraThinMaterial)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
