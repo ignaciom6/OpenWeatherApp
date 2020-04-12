@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7DU-sn-TiL">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -184,7 +185,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GrL-1h-RRi">
-                                <rect key="frame" x="73.666666666666686" y="125" width="267" height="142"/>
+                                <rect key="frame" x="73.666666666666686" y="137" width="267" height="142"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-rx-NHJ">
                                         <rect key="frame" x="8" y="39" width="70" height="70"/>
@@ -211,7 +212,6 @@
                                     <constraint firstAttribute="width" constant="267" id="a7n-RK-LeK"/>
                                     <constraint firstItem="a6Q-h5-5vW" firstAttribute="top" secondItem="GrL-1h-RRi" secondAttribute="top" constant="5" id="esO-AV-ct5"/>
                                     <constraint firstAttribute="height" constant="142" id="osM-n4-iBH"/>
-                                    <constraint firstItem="CSS-rx-NHJ" firstAttribute="top" secondItem="GrL-1h-RRi" secondAttribute="top" constant="39" id="qHp-4L-UI9"/>
                                     <constraint firstAttribute="bottom" secondItem="CSS-rx-NHJ" secondAttribute="bottom" constant="33" id="sXW-tO-RDh"/>
                                     <constraint firstAttribute="bottom" secondItem="a6Q-h5-5vW" secondAttribute="bottom" constant="4" id="uDb-m8-Uf5"/>
                                 </constraints>
@@ -290,18 +290,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vienna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZW-hR-qKx">
+                                <rect key="frame" x="99" y="108" width="216" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Qbc-l1-K8M"/>
+                                    <constraint firstAttribute="width" constant="216" id="luF-wa-o6E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="yiH-Vc-1jA" firstAttribute="leading" secondItem="pIu-Nk-8yz" secondAttribute="leading" id="1rT-F9-Fhw"/>
                             <constraint firstItem="iUg-Vn-Ih3" firstAttribute="trailing" secondItem="pIu-Nk-8yz" secondAttribute="trailing" id="2qn-qc-QTM"/>
-                            <constraint firstItem="K2h-3Z-EI9" firstAttribute="top" secondItem="GrL-1h-RRi" secondAttribute="bottom" constant="25" id="3M6-Rn-P7t"/>
+                            <constraint firstItem="K2h-3Z-EI9" firstAttribute="top" secondItem="GrL-1h-RRi" secondAttribute="bottom" constant="13" id="3M6-Rn-P7t"/>
+                            <constraint firstItem="xZW-hR-qKx" firstAttribute="centerX" secondItem="1A4-Ek-eGD" secondAttribute="centerX" id="4eg-Go-D6D"/>
                             <constraint firstItem="pIu-Nk-8yz" firstAttribute="trailing" secondItem="GFI-sT-06b" secondAttribute="trailing" constant="59" id="I3Q-qa-uJZ"/>
-                            <constraint firstItem="GrL-1h-RRi" firstAttribute="top" secondItem="pIu-Nk-8yz" secondAttribute="top" constant="37" id="JTb-EM-laP"/>
                             <constraint firstAttribute="bottom" secondItem="iUg-Vn-Ih3" secondAttribute="bottom" id="JcM-sB-Xb5"/>
                             <constraint firstItem="yiH-Vc-1jA" firstAttribute="trailing" secondItem="pIu-Nk-8yz" secondAttribute="trailing" id="JuR-Mb-yEt"/>
                             <constraint firstItem="K2h-3Z-EI9" firstAttribute="leading" secondItem="pIu-Nk-8yz" secondAttribute="leading" constant="60" id="QNk-q5-M2V"/>
                             <constraint firstItem="pIu-Nk-8yz" firstAttribute="trailing" secondItem="K2h-3Z-EI9" secondAttribute="trailing" constant="59" id="WJj-70-NPX"/>
+                            <constraint firstItem="xZW-hR-qKx" firstAttribute="top" secondItem="pIu-Nk-8yz" secondAttribute="top" constant="20" id="XyN-ct-gS0"/>
                             <constraint firstItem="GWF-bP-jHt" firstAttribute="trailing" secondItem="pIu-Nk-8yz" secondAttribute="trailing" id="aS5-bw-vZG"/>
                             <constraint firstItem="iUg-Vn-Ih3" firstAttribute="top" secondItem="yiH-Vc-1jA" secondAttribute="bottom" constant="1" id="bVw-GR-UN5"/>
                             <constraint firstItem="GFI-sT-06b" firstAttribute="top" secondItem="K2h-3Z-EI9" secondAttribute="bottom" constant="8" id="bk1-gu-ajp"/>
@@ -309,6 +320,7 @@
                             <constraint firstItem="yiH-Vc-1jA" firstAttribute="top" secondItem="GFI-sT-06b" secondAttribute="bottom" constant="21" id="d2a-z6-RqZ"/>
                             <constraint firstAttribute="bottom" secondItem="GWF-bP-jHt" secondAttribute="bottom" id="dfq-gY-EXC"/>
                             <constraint firstItem="GrL-1h-RRi" firstAttribute="centerX" secondItem="1A4-Ek-eGD" secondAttribute="centerX" id="gwW-Dk-I7m"/>
+                            <constraint firstItem="GrL-1h-RRi" firstAttribute="top" secondItem="xZW-hR-qKx" secondAttribute="bottom" constant="8" id="l2d-S7-Mpa"/>
                             <constraint firstItem="GFI-sT-06b" firstAttribute="leading" secondItem="pIu-Nk-8yz" secondAttribute="leading" constant="60" id="n5V-ec-ytG"/>
                             <constraint firstItem="GWF-bP-jHt" firstAttribute="top" secondItem="1A4-Ek-eGD" secondAttribute="top" id="ne5-ej-Phc"/>
                             <constraint firstItem="GWF-bP-jHt" firstAttribute="leading" secondItem="pIu-Nk-8yz" secondAttribute="leading" id="tEG-dg-RUr"/>
@@ -318,6 +330,7 @@
                     <navigationItem key="navigationItem" id="ZIH-z2-SHB"/>
                     <connections>
                         <outlet property="backgroundImage" destination="GWF-bP-jHt" id="ZQL-ji-003"/>
+                        <outlet property="cityNameLabel" destination="xZW-hR-qKx" id="OTp-0q-NEr"/>
                         <outlet property="dateLabel" destination="K2h-3Z-EI9" id="dHT-V0-kXV"/>
                         <outlet property="descriptionLabel" destination="GFI-sT-06b" id="9LH-tT-4w1"/>
                         <outlet property="humidityLabel" destination="61q-mb-n1e" id="xZJ-AO-6ZF"/>

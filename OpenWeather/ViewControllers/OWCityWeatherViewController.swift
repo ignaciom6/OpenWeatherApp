@@ -10,6 +10,7 @@ import UIKit
 
 class OWCityWeatherViewController: UIViewController {
 
+    @IBOutlet var cityNameLabel: UILabel!
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tempLabel: UILabel!
@@ -45,6 +46,7 @@ class OWCityWeatherViewController: UIViewController {
     }
     
     func setUpUI() {
+        cityNameLabel.text = cityModel?.name
         tempLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.temp ?? OWConstants.kDefaultDoubleValue)+"º"
         dateLabel.text = OWCityWeatherViewModel.getDateFrom(unix: currentWeather?.time ?? NSDate().timeIntervalSince1970, style: OWConstants.kStyleFull)
         descriptionLabel.text = OWCityWeatherViewModel.getWeatherDescription(array: currentWeather?.weatherDescription ?? [])
