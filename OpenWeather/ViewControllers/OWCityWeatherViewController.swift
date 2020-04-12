@@ -26,6 +26,10 @@ class OWCityWeatherViewController: UIViewController {
     var dailyWeather: [OWDailyWeatherModel] = []
     let kRowHeight: CGFloat = 25
     let kBlurValue = 7
+    let kDegreeUnit = "º"
+    let kKmphUnit = "km/h"
+    let kMmUnit = "mm"
+    let kPercentage = "%"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,13 +51,13 @@ class OWCityWeatherViewController: UIViewController {
     
     func setUpUI() {
         cityNameLabel.text = cityModel?.name
-        tempLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.temp ?? OWConstants.kDefaultDoubleValue)+"º"
+        tempLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.temp ?? OWConstants.kDefaultDoubleValue)+kDegreeUnit
         dateLabel.text = OWCityWeatherViewModel.getDateFrom(unix: currentWeather?.time ?? NSDate().timeIntervalSince1970, style: OWConstants.kStyleFull)
         descriptionLabel.text = OWCityWeatherViewModel.getWeatherDescription(array: currentWeather?.weatherDescription ?? [])
         mainWeatherIcon.loadImageFrom(url: OWCityWeatherViewModel.getImageURL(array: currentWeather?.weatherDescription ?? []))
-        windLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.wind ?? OWConstants.kDefaultDoubleValue)+"km/h"
-        rainLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.rain?.rain ?? OWConstants.kDefaultDoubleValue)+"mm"
-        humidityLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.humidity ?? OWConstants.kDefaultDoubleValue)+"%"
+        windLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.wind ?? OWConstants.kDefaultDoubleValue)+kKmphUnit
+        rainLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.rain?.rain ?? OWConstants.kDefaultDoubleValue)+kMmUnit
+        humidityLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.humidity ?? OWConstants.kDefaultDoubleValue)+kPercentage
     }
     
     func setUpTableView() {
