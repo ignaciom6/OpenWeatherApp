@@ -8,7 +8,7 @@ Clone or download the project from the GIT repository and open OpenWeather.xcod
 
 ### Prerequisites
 
-This app works with iOS 12.0 and above.
+This app works with iOS 12.0 and above, and it's an iPhone only app.
 
 ## Deployment
 
