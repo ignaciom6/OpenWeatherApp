@@ -38,7 +38,7 @@ class OWCityWeatherViewController: UIViewController {
         currentWeather = cityModel?.weather?.currentWeather
         dailyWeather = cityModel?.weather?.dailyWeather ?? []
         
-        backgroundImage.image = UIImage(named: cityModel?.name ?? "")
+        backgroundImage.image = UIImage(named: cityModel?.name ?? "") ?? UIImage(named: OWConstants.kDefaultBackgroundImage)
         addBlurEffectToBackground()
         setUpUI()
     }
@@ -85,7 +85,7 @@ extension OWCityWeatherViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell") as? OWExtendedForecastTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: OWConstants.kForecastCellIdentifier) as? OWExtendedForecastTableViewCell
         
         let dayWeather = dailyWeather[indexPath.row]
         cell?.dayLabel.text = OWCityWeatherViewModel.getDateFrom(unix: dayWeather.day, style: OWConstants.kStyleDay)

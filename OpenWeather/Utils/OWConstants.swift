@@ -10,6 +10,8 @@ import Foundation
 
 struct OWConstants {
     static let kCityCellIdentifier = "cityCell"
+    static let kForecastCellIdentifier = "forecastCell"
+    static let kDefaultBackgroundImage = "Default"
     static let kCurrentKey = "current"
     static let kDailyKey = "daily"
     static let kTempKey = "temp"

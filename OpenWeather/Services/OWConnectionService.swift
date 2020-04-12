@@ -22,7 +22,7 @@ class OWConnectionService: NSObject {
                 do {
                     weatherDic = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
                 } catch {
-                    
+                    completion(weatherDic, error)
                 }
                 completion(weatherDic, error)
             } else {

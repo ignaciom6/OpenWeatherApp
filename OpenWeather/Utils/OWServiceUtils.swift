@@ -13,14 +13,16 @@ class OWServiceUtils: NSObject {
     class func getURLForCity(city: OWCityModel) -> URL {
         let urlComponents = NSURLComponents(string: "https://api.openweathermap.org/data/2.5/onecall")
         let appIdKey = "07ee4f5e922183c2c49256d3e5011b4e"
+        let metricUnit = "metric"
         
         let lat = city.lat
         let lon = city.lon
         urlComponents?.queryItems = [
             URLQueryItem(name: "lat", value: String(lat)),
             URLQueryItem(name: "lon", value: String(lon)),
-            URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "appid", value: appIdKey)]
+            URLQueryItem(name: "units", value: metricUnit),
+            URLQueryItem(name: "appid", value: appIdKey)
+        ]
         
         return (urlComponents?.url)!
     }
