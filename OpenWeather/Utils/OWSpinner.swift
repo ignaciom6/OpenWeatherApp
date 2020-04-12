@@ -18,9 +18,9 @@ extension UIViewController {
         
         switch traitCollection.userInterfaceStyle {
         case .light:
-            activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+            activityIndicator = UIActivityIndicatorView(style: .gray)
         case .dark:
-            activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+            activityIndicator = UIActivityIndicatorView(style: .white)
         case .unspecified: break
         @unknown default:
             break

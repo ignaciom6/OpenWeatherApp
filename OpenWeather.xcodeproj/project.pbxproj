@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F5630E02440994F0023BEEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5630DF2440994F0023BEEC /* AppDelegate.swift */; };
-		4F5630E22440994F0023BEEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5630E12440994F0023BEEC /* SceneDelegate.swift */; };
 		4F5630E42440994F0023BEEC /* OWCityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5630E32440994F0023BEEC /* OWCityListViewController.swift */; };
 		4F5630E72440994F0023BEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5630E52440994F0023BEEC /* Main.storyboard */; };
 		4F5630E9244099580023BEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5630E8244099580023BEEC /* Assets.xcassets */; };
@@ -48,7 +47,6 @@
 /* Begin PBXFileReference section */
 		4F5630DC2440994F0023BEEC /* OpenWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5630DF2440994F0023BEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F5630E12440994F0023BEEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4F5630E32440994F0023BEEC /* OWCityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCityListViewController.swift; sourceTree = "<group>"; };
 		4F5630E62440994F0023BEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F5630E8244099580023BEEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				4F56310B2440A8100023BEEC /* Utils */,
 				4F56311B2441F7810023BEEC /* Protocols */,
 				4F5630DF2440994F0023BEEC /* AppDelegate.swift */,
-				4F5630E12440994F0023BEEC /* SceneDelegate.swift */,
 				4F5630E52440994F0023BEEC /* Main.storyboard */,
 				4F5630E8244099580023BEEC /* Assets.xcassets */,
 				4F5630EA244099580023BEEC /* LaunchScreen.storyboard */,
@@ -346,7 +343,6 @@
 				4F5631302442828D0023BEEC /* OWImageDownloader.swift in Sources */,
 				4F5631152440EE900023BEEC /* OWCityWeatherViewController.swift in Sources */,
 				4F5630E02440994F0023BEEC /* AppDelegate.swift in Sources */,
-				4F5630E22440994F0023BEEC /* SceneDelegate.swift in Sources */,
 				4F563118244168740023BEEC /* OWExtendedForecastTableViewCell.swift in Sources */,
 				4F56310F2440AC900023BEEC /* OWWeatherModel.swift in Sources */,
 				4F56311A2441F6920023BEEC /* OWConnectionManager.swift in Sources */,
@@ -512,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Ignaciom6.OpenWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -529,6 +526,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Ignaciom6.OpenWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

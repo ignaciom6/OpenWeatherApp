@@ -24,6 +24,7 @@ class OWCityWeatherViewController: UIViewController {
     var currentWeather: OWCurrentWeatherModel?
     var dailyWeather: [OWDailyWeatherModel] = []
     let kRowHeight: CGFloat = 25
+    let kBlurValue = 7
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +67,12 @@ class OWCityWeatherViewController: UIViewController {
     }
     
     func addBlurEffectToBackground() {
-        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterial)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = backgroundImage.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        backgroundImage.addSubview(blurEffectView)
+        let blurEffect = (NSClassFromString("_UICustomBlurEffect") as! UIBlurEffect.Type).init()
+        
+        let blurView = UIVisualEffectView(frame: backgroundImage.bounds)
+        blurEffect.setValue(kBlurValue, forKey: "blurRadius")
+        blurView.effect = blurEffect
+        backgroundImage.addSubview(blurView)
     }
     
     func setCityWeatherModel(city: OWCityModel) {
