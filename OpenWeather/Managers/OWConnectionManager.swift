@@ -15,11 +15,9 @@ class OWConnectionManager: NSObject {
         
         connectionSrv.getAPIResponseForCity(city: city) { (value, error) in
             if value != nil {
-                if value != nil {
-                    completion(modelManager.createModelWithDictionary(dict: value ?? [:]), nil)
-                } else {
-                    completion(nil, error)
-                }
+                completion(modelManager.createModelWithDictionary(dict: value ?? [:]), nil)
+            } else {
+                completion(nil, error)
             }
         }
     }

@@ -19,7 +19,7 @@ class OWCurrentWeatherModel: NSObject {
     var weatherDescription: [OWWeatherDescriptionModel]
 
     init(withDictionary dictionary: [String : Any]) {
-        let rainDefautlModel: [String : Any] = ["1h" : 0.0]
+        let rainDefautlModel: [String : Any] = [OWConstants.k1hKey : OWConstants.kDefaultDoubleValue]
         
         temp = dictionary[OWConstants.kTempKey] as! Double
         feelsLike = dictionary[OWConstants.kFeelsLikeKey] as! Double

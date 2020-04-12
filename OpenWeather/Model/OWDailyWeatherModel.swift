@@ -16,7 +16,7 @@ class OWDailyWeatherModel: NSObject {
     
     init(withDictionary dictionary: [String : Any]) {
         day = dictionary[OWConstants.kTimeKey] as! Double
-        tempModel = OWTempModel(withDictionary: dictionary["temp"] as! [String : Any])
+        tempModel = OWTempModel(withDictionary: dictionary[OWConstants.kTempKey] as! [String : Any])
         
         let array = dictionary[OWConstants.kWeatherKey] as! [AnyHashable]
         var weatherArray: [OWWeatherDescriptionModel] = []

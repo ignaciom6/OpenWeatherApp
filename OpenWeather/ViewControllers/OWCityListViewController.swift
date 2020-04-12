@@ -42,7 +42,7 @@ extension OWCityListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: OWConstants.kCityCellIdentifier)
         
         let city = citiesArray[indexPath.row]
         cell?.textLabel?.text = city.name
@@ -69,10 +69,15 @@ extension OWCityListViewController: UITableViewDelegate {
                     self?.performSegue(withIdentifier: OWConstants.kListToWeatherSegue, sender: nil)
                 }
             } else {
-                //TODO - Error alert
+                DispatchQueue.main.async {
+                    self?.hideSpinner()
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+                        self?.dismiss(animated: true, completion: nil)
+                    }))
+                    self?.present(alert, animated: true, completion: nil)
+                }
             }
         }
-        
-        
     }
 }

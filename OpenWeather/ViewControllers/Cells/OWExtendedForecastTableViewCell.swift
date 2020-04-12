@@ -11,6 +11,9 @@ import UIKit
 class OWExtendedForecastTableViewCell: UITableViewCell {
 
     @IBOutlet var dayLabel: UILabel!
+    @IBOutlet var weatherImg: UIImageView!
+    @IBOutlet var maxTempLabel: UILabel!
+    @IBOutlet var minTempLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

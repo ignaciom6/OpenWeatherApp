@@ -16,10 +16,14 @@ class OWCityWeatherViewController: UIViewController {
     @IBOutlet var mainWeatherIcon: UIImageView!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var windLabel: UILabel!
+    @IBOutlet var rainLabel: UILabel!
+    @IBOutlet var humidityLabel: UILabel!
     
     var cityModel: OWCityModel?
     var currentWeather: OWCurrentWeatherModel?
     var dailyWeather: [OWDailyWeatherModel] = []
+    let kRowHeight: CGFloat = 25
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +44,13 @@ class OWCityWeatherViewController: UIViewController {
     }
     
     func setUpUI() {
-        tempLabel.text = OWCityWeatherViewModel.getMainTempFrom(temp: currentWeather?.temp ?? OWConstants.kDefaultDoubleValue)
-        dateLabel.text = OWCityWeatherViewModel.getFullTimeFrom(unix: currentWeather?.time ?? NSDate().timeIntervalSince1970)
+        tempLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.temp ?? OWConstants.kDefaultDoubleValue)+"º"
+        dateLabel.text = OWCityWeatherViewModel.getDateFrom(unix: currentWeather?.time ?? NSDate().timeIntervalSince1970, style: OWConstants.kStyleFull)
         descriptionLabel.text = OWCityWeatherViewModel.getWeatherDescription(array: currentWeather?.weatherDescription ?? [])
         mainWeatherIcon.loadImageFrom(url: OWCityWeatherViewModel.getImageURL(array: currentWeather?.weatherDescription ?? []))
+        windLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.wind ?? OWConstants.kDefaultDoubleValue)+"km/h"
+        rainLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.rain?.rain ?? OWConstants.kDefaultDoubleValue)+"mm"
+        humidityLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: currentWeather?.humidity ?? OWConstants.kDefaultDoubleValue)+"%"
     }
     
     func setUpTableView() {
@@ -61,7 +68,7 @@ class OWCityWeatherViewController: UIViewController {
     func addBlurEffectToBackground() {
         let blurEffect = UIBlurEffect(style: .systemUltraThinMaterial)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
+        blurEffectView.frame = backgroundImage.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         backgroundImage.addSubview(blurEffectView)
     }
@@ -74,14 +81,17 @@ class OWCityWeatherViewController: UIViewController {
 
 extension OWCityWeatherViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dailyWeather.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell") as? OWExtendedForecastTableViewCell
         
-//        let city = citiesArray[indexPath.row]
-        cell?.dayLabel.text = "Saturday"
+        let dayWeather = dailyWeather[indexPath.row]
+        cell?.dayLabel.text = OWCityWeatherViewModel.getDateFrom(unix: dayWeather.day, style: OWConstants.kStyleDay)
+        cell?.weatherImg.loadImageFrom(url: OWCityWeatherViewModel.getImageURL(array: dayWeather.weatherDescription))
+        cell?.maxTempLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: dayWeather.tempModel.max)
+        cell?.minTempLabel.text = OWCityWeatherViewModel.getStringFromDouble(value: dayWeather.tempModel.min)
         
         return cell!
     }
@@ -90,20 +100,6 @@ extension OWCityWeatherViewController: UITableViewDataSource {
 
 extension OWCityWeatherViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 25
+        return kRowHeight
     }
 }
-
-//extension UIImageView {
-//    func loadImageFrom(url: URL) {
-//        DispatchQueue.global().async { [weak self] in
-//            if let data = try? Data(contentsOf: url) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self?.image = image
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}

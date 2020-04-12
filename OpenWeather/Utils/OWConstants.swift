@@ -9,6 +9,7 @@
 import Foundation
 
 struct OWConstants {
+    static let kCityCellIdentifier = "cityCell"
     static let kCurrentKey = "current"
     static let kDailyKey = "daily"
     static let kTempKey = "temp"
@@ -30,4 +31,6 @@ struct OWConstants {
     static let k1hKey = "1h"
     static let kListToWeatherSegue = "ListToWeatherSegue"
     static let kDefaultDoubleValue = 0.0
+    static let kStyleFull = "full"
+    static let kStyleDay = "day"
 }

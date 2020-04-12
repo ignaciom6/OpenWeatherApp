@@ -9,17 +9,23 @@
 import UIKit
 
 class OWCityWeatherViewModel: NSObject {
-    class func getMainTempFrom(temp: Double) -> String {
-        return String(format:"%.0f", temp )+"º"
+    class func getStringFromDouble(value: Double) -> String {
+        return String(format:"%.0f", value)
     }
     
-    class func getFullTimeFrom(unix: Double) -> String {
+    class func getDateFrom(unix: Double, style: String) -> String {
         let date = Date(timeIntervalSince1970: unix)
         
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(abbreviation: "GMT")
         formatter.locale = NSLocale.current
-        formatter.dateFormat = "E, d MMM yyyy HH:mm"
+        
+        if style == OWConstants.kStyleFull {
+            formatter.dateFormat = "E, d MMM yyyy HH:mm"
+        } else if style == OWConstants.kStyleDay {
+            formatter.dateFormat = "EEEE"
+        }
+        
         let strDate = formatter.string(from: date)
         
         return strDate
@@ -34,5 +40,7 @@ class OWCityWeatherViewModel: NSObject {
         let baseUrl = "https://openweathermap.org/img/wn/"+icon+"@2x.png"
         return URL(string: baseUrl)!
     }
+    
+    
 
 }
