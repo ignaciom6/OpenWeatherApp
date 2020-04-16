@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F41EE4D2448F13D009B6E2E /* OWBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F41EE4C2448F13D009B6E2E /* OWBox.swift */; };
 		4F5630E02440994F0023BEEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5630DF2440994F0023BEEC /* AppDelegate.swift */; };
 		4F5630E42440994F0023BEEC /* OWCityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5630E32440994F0023BEEC /* OWCityListViewController.swift */; };
 		4F5630E72440994F0023BEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5630E52440994F0023BEEC /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F41EE4C2448F13D009B6E2E /* OWBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWBox.swift; sourceTree = "<group>"; };
 		4F5630DC2440994F0023BEEC /* OpenWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5630DF2440994F0023BEEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F5630E32440994F0023BEEC /* OWCityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWCityListViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				4F5631252442037A0023BEEC /* OWServiceUtils.swift */,
 				4F56312B244241720023BEEC /* OWSpinner.swift */,
 				4F56312F2442828C0023BEEC /* OWImageDownloader.swift */,
+				4F41EE4C2448F13D009B6E2E /* OWBox.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F56310624409A6D0023BEEC /* OWCityModel.swift in Sources */,
+				4F41EE4D2448F13D009B6E2E /* OWBox.swift in Sources */,
 				4F5631112440ACB40023BEEC /* OWDailyWeatherModel.swift in Sources */,
 				4F56310A2440A2A40023BEEC /* OWWeatherDescriptionModel.swift in Sources */,
 				4F56311D2441F7A50023BEEC /* OWModelManager.swift in Sources */,
@@ -507,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D23847FTP;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D23847FTP;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
